@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="640" viewBox="0 0 1600 640" role="img" aria-labelledby="title desc">
+<title id="title">WiFi Pulse Oximeter — ESP8266, MAX30100, OLED, Blynk</title>
+<desc id="desc">System diagram of an educational prototype. MAX30100 optical sensor connects by I2C to an ESP8266, which provides a local OLED display and optional Wi-Fi telemetry to a Blynk dashboard. No clinical or measured values are shown.</desc>
+<defs>
+<linearGradient id="bg" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#0A131D"/><stop offset="1" stop-color="#132633"/></linearGradient>
+<pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#658197" stroke-opacity=".095"/></pattern>
+<marker id="arrowC" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M1 1 9 5 1 9" fill="none" stroke="#71CEE9" stroke-width="1.7"/></marker>
+<marker id="arrowW" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M1 1 9 5 1 9" fill="none" stroke="#D1DBE3" stroke-width="1.7"/></marker>
+<style>
+.head{font-family:Arial,Helvetica,sans-serif;font-weight:800;fill:#F3F7F9;letter-spacing:1.2px}
+.mid{font-family:Arial,Helvetica,sans-serif;font-weight:650;fill:#E7F0F5}
+.body{font-family:Arial,Helvetica,sans-serif;fill:#D1DBE3}
+.muted{font-family:Arial,Helvetica,sans-serif;fill:#8FAABD}
+.tag{font-family:Arial,Helvetica,sans-serif;font-weight:700;fill:#72D4F1;letter-spacing:2px}
+</style>
+</defs>
+<rect width="1600" height="640" rx="16" fill="url(#bg)"/>
+<rect width="1600" height="640" rx="16" fill="url(#grid)"/>
+<g opacity=".3" stroke="#4E9ABE" fill="none" stroke-width="2">
+<path d="M0 74H170L230 14H355"/><circle cx="170" cy="74" r="5" fill="#4E9ABE"/>
+<path d="M1272 0V54L1331 112H1600"/><circle cx="1331" cy="112" r="5" fill="#4E9ABE"/>
+<path d="M0 505H126L188 567H334"/><circle cx="126" cy="505" r="5" fill="#4E9ABE"/>
+<path d="M1375 640V572H1462L1510 524H1600"/>
+</g>
+<g transform="translate(72 118)">
+<g fill="none" stroke="#75D1F1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+<path d="M12 55H28L39 29L55 79L70 45L80 55H115"/>
+<path d="M8 14C28 -4 49 5 60 19C78 0 108 6 116 32C126 58 95 79 60 104C24 80 -3 55 1 35C2 26 5 19 8 14Z" opacity=".55"/>
+</g>
+<path d="M156 2V112" stroke="#5E7989" stroke-width="2"/>
+<text x="0" y="190" class="head" font-size="66">WiFi Pulse</text>
+<text x="0" y="266" class="head" font-size="66">Oximeter</text>
+<text x="2" y="311" class="tag" font-size="17">ESP8266 / MAX30100 / OLED / BLYNK</text>
+<rect x="2" y="350" width="112" height="5" rx="2.5" fill="#75D1F1"/>
+<text x="1" y="405" class="body" font-size="24">Optical sensing. Local display.</text>
+<text x="1" y="439" class="body" font-size="24">Optional Wi-Fi telemetry.</text>
+</g>
+<path d="M685 126V522" stroke="#4A6475" stroke-width="1.4" stroke-dasharray="4 8"/>
+<text x="758" y="100" class="tag" font-size="16">SYSTEM ARCHITECTURE</text>
+<g transform="translate(740 203)">
+<rect width="215" height="182" rx="15" fill="#192C39" stroke="#59B7DE" stroke-width="2.5"/>
+<rect x="67" y="24" width="80" height="67" rx="9" fill="#101D27" stroke="#74D2EF" stroke-width="2.5"/>
+<circle cx="90" cy="57" r="12" fill="none" stroke="#6ACCEB" stroke-width="3"/>
+<circle cx="124" cy="57" r="12" fill="none" stroke="#6ACCEB" stroke-width="3"/>
+<text x="107" y="128" class="mid" font-size="24" text-anchor="middle">MAX30100</text>
+<text x="107" y="153" class="muted" font-size="16" text-anchor="middle">Optical sensor</text>
+</g>
+<g transform="translate(1063 194)">
+<rect width="225" height="200" rx="15" fill="#1A3440" stroke="#71D0EE" stroke-width="2.5"/>
+<rect x="81" y="23" width="63" height="66" rx="5" fill="#0E1A24" stroke="#BDD6E3" stroke-width="2"/>
+<path d="M95 56Q112 35 131 56M102 62Q112 51 123 62" stroke="#71D0EE" stroke-width="3" fill="none" stroke-linecap="round"/>
+<g stroke="#71D0EE" stroke-width="2"><path d="M74 30H64M74 45H64M74 60H64M74 75H64M151 30H161M151 45H161M151 60H161M151 75H161"/></g>
+<text x="112" y="130" class="mid" font-size="25" text-anchor="middle">ESP8266</text>
+<text x="112" y="158" class="muted" font-size="16" text-anchor="middle">Processing + Wi-Fi</text>
+<text x="112" y="181" class="muted" font-size="14" text-anchor="middle">Arduino firmware</text>
+</g>
+<path d="M955 294H1049" stroke="#D1DBE3" stroke-width="3.5" fill="none" marker-end="url(#arrowW)"/>
+<rect x="978" y="258" width="53" height="22" rx="10" fill="#203544"/>
+<text x="1005" y="275" class="muted" font-size="14" text-anchor="middle">I²C</text>
+<path d="M1288 294H1330V183H1372" stroke="#71CEE9" stroke-width="3.5" fill="none" marker-end="url(#arrowC)"/>
+<path d="M1288 294H1330V405H1372" stroke="#71CEE9" stroke-width="3.5" fill="none" marker-end="url(#arrowC)"/>
+<circle cx="1330" cy="294" r="6" fill="#71CEE9"/>
+<g transform="translate(1380 122)">
+<rect width="157" height="127" rx="14" fill="#152A36" stroke="#81CDE8" stroke-width="2.2"/>
+<rect x="23" y="18" width="111" height="63" rx="6" fill="#0A131D" stroke="#A5D9EF" stroke-width="2"/>
+<path d="M37 50H50L57 37L66 65L74 50H120" fill="none" stroke="#7ED3ED" stroke-width="3" stroke-linejoin="round"/>
+<text x="78" y="103" class="mid" font-size="22" text-anchor="middle">OLED</text>
+<text x="78" y="122" class="muted" font-size="13" text-anchor="middle">Local display</text>
+</g>
+<g transform="translate(1380 344)">
+<rect width="157" height="127" rx="14" fill="#152A36" stroke="#81CDE8" stroke-width="2.2"/>
+<path d="M45 66C30 66 25 52 31 43C35 36 44 34 49 35C57 13 93 14 102 35C118 35 126 47 122 57C120 63 114 66 107 66Z" fill="none" stroke="#75D1F1" stroke-width="3" stroke-linejoin="round"/>
+<text x="78" y="99" class="mid" font-size="22" text-anchor="middle">Blynk</text>
+<text x="78" y="118" class="muted" font-size="13" text-anchor="middle">Optional dashboard</text>
+</g>
+<rect x="716" y="526" width="830" height="51" rx="11" fill="#1B3342" stroke="#355669"/>
+<text x="741" y="558" class="muted" font-size="18">SENSE</text>
+<path d="M815 552H868" stroke="#74D3F0" stroke-width="2.5" marker-end="url(#arrowC)"/>
+<text x="894" y="558" class="muted" font-size="18">PROCESS</text>
+<path d="M1000 552H1053" stroke="#74D3F0" stroke-width="2.5" marker-end="url(#arrowC)"/>
+<text x="1079" y="558" class="muted" font-size="18">DISPLAY</text>
+<path d="M1196 552H1249" stroke="#74D3F0" stroke-width="2.5" marker-end="url(#arrowC)"/>
+<text x="1275" y="558" class="muted" font-size="18">PUBLISH (OPTIONAL)</text>
+<path d="M0 590H1600" stroke="#304E60" stroke-width="1.6"/>
+<text x="73" y="615" class="muted" font-size="15" letter-spacing="1.3">EDUCATIONAL PROTOTYPE   /   SYSTEM DIAGRAM   /   NOT FOR CLINICAL USE</text>
+</svg>

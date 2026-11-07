@@ -1,5 +1,7 @@
 # Wi-Fi Pulse Oximeter
 
+![Wi-Fi Pulse Oximeter architecture: MAX30100 sensor, ESP8266, OLED display, and optional Blynk IoT dashboard](docs/brand/pulse-oximeter-banner.svg)
+
 **ESP8266 · MAX30100 · OLED · Blynk IoT**
 
 An educational IoT prototype that reads heart-rate and estimated peripheral oxygen saturation (SpO₂) from a MAX30100 module. The ESP8266 displays values on an I²C OLED and can publish valid readings to a Blynk dashboard over Wi-Fi.
