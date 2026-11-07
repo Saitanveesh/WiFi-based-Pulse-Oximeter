@@ -1,5 +1,6 @@
 """Repository checks that do not require Arduino hardware or private credentials."""
 
+import xml.etree.ElementTree as ET
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -27,6 +28,13 @@ def main() -> None:
     assert (ROOT / "docs" / "PROVENANCE.md").exists()
     assert (ROOT / "LICENSE").exists()
     assert (ROOT / "SECURITY.md").exists()
+    banner = ROOT / "docs" / "brand" / "pulse-oximeter-banner.svg"
+    assert banner.is_file(), "Project banner missing"
+    root = ET.parse(banner).getroot()
+    assert root.tag == "{http://www.w3.org/2000/svg}svg"
+    assert root.attrib.get("viewBox") == "0 0 1600 640"
+    assert "docs/brand/pulse-oximeter-banner.svg" in readme
+    assert "98%" not in banner.read_text(encoding="utf-8"), "Do not display fabricated readings"
     for needle in ("char auth[]", "char ssid[]", "char pass[]"):
         assert needle not in source, "Legacy embedded credentials found"
 
