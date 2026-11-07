@@ -15,6 +15,7 @@
 
 #include <Arduino.h>
 #include <Wire.h>
+#include <Adafruit_GFX.h>
 #include <ESP8266WiFi.h>
 #include <BlynkSimpleEsp8266.h>
 #include <MAX30100_PulseOximeter.h>
