@@ -1,18 +1,17 @@
-# Visual identity and media provenance
+# Repository visual identity
 
-## Adobe project cover
+## Primary cover
 
-The [project cover](brand/adobe-pulse-oximeter-cover.jpg) at the top of the README is original illustrative artwork made with **Adobe Firefly**. It uses optical-sensing, microcontroller, PCB-trace, and Wi-Fi motifs. It is deliberately abstract: it is **not a photograph of assembled hardware, a wiring schematic, or evidence of working measurements**.
+The README uses the source-controlled [labeled technical banner](brand/pulse-oximeter-banner.svg) showing the MAX30100 optical sensor, ESP8266 controller, local OLED readout, and optional Blynk cloud interface.
 
-The README's status badges reflect the actual evidence boundary: educational prototype, ESP8266/MAX30100 hardware baseline, and physical hardware testing pending.
+It is an explanatory architecture illustration rather than a photograph, wiring schematic, calibrated sensor display, or validation of real measurements. The hardware prototype requires physical testing before those claims can be made.
 
-## Technical architecture
+## Presentation requirements
 
-The retained [labeled system diagram](brand/pulse-oximeter-banner.svg) belongs under "Hardware and data path" in the README. It identifies MAX30100, ESP8266, local OLED and optional Blynk integration. This diagram is explanatory and should be checked against the actual wiring before making implementation claims.
+- Make the project name and component identities legible in the first viewport of the README.
+- Use consistent labels: **MAX30100**, **ESP8266**, **OLED**, **Blynk IoT**.
+- Do not use decorative art alone as the primary GitHub cover.
+- Do not create simulated clinical measurements, fabricated phone screenshots, or unverified medical claims.
+- Preserve the educational-prototype and non-clinical-use notices until actual validation supports changing them.
 
-## Presentation rules
-
-- Keep generated visual artwork distinct from hardware photographs and engineering evidence.
-- Do not insert fictional SpO₂ or BPM values, patient graphs, screenshots, clinical endorsements, or medical efficacy claims.
-- Preserve the educational status and not-for-clinical-use warning until independent validation justifies a change.
-- The source illustration and architecture diagram are project assets; third-party images require documented reuse rights.
+A previous decorative Adobe illustration was removed from the README because it concealed the project identity and conveyed little technical information. No runtime code or project firmware was changed.
