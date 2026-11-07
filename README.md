@@ -48,7 +48,7 @@ The firmware attempts to keep local sampling active when Blynk is disconnected. 
 | Local OLED and MAX30100 acquisition | Implemented in code; hardware retest required |
 | Blynk cloud output | Implemented with `V7` and `V8`; account and hardware test required |
 | Sensor accuracy | No calibration or clinical validation provided |
-| Reliability during Wi-Fi loss | Nonblocking reconnect design; not yet measured |
+| Reliability during Wi-Fi loss | Periodic, time-limited reconnect attempts; not yet measured |
 | Medical-device certification | Not claimed |
 
 ## Security and source attribution
