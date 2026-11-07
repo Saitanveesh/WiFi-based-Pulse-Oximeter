@@ -34,12 +34,10 @@ def main() -> None:
     assert root.tag == "{http://www.w3.org/2000/svg}svg"
     assert root.attrib.get("viewBox") == "0 0 1600 640"
     assert "docs/brand/pulse-oximeter-banner.svg" in readme
-    hero = ROOT / "docs" / "brand" / "adobe-pulse-oximeter-cover.jpg"
-    assert hero.exists(), "Adobe cover artwork missing"
-    assert hero.read_bytes()[:3] == bytes.fromhex("ffd8ff"), "Invalid cover JPEG"
-    assert "docs/brand/adobe-pulse-oximeter-cover.jpg" in readme
     assert "hardware%20testing-pending" in readme
     assert (ROOT / "docs" / "BRANDING.md").exists()
+    assert readme.count("docs/brand/pulse-oximeter-banner.svg") == 1
+    assert "adobe-pulse-oximeter-cover.jpg" not in readme
     assert "98%" not in banner.read_text(encoding="utf-8"), "Do not display fabricated readings"
     for needle in ("char auth[]", "char ssid[]", "char pass[]"):
         assert needle not in source, "Legacy embedded credentials found"

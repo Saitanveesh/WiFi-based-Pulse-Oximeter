@@ -1,11 +1,10 @@
 # Wi-Fi Pulse Oximeter
 
-![Adobe-designed pulse oximeter project cover: abstract optical sensing, microcontroller and Wi-Fi motifs](docs/brand/adobe-pulse-oximeter-cover.jpg)
+![Wi-Fi Pulse Oximeter — ESP8266, MAX30100, OLED and Blynk architecture](docs/brand/pulse-oximeter-banner.svg)
 
 ![Prototype status](https://img.shields.io/badge/status-educational%20prototype-255D78)
 ![Hardware](https://img.shields.io/badge/hardware-ESP8266%20%7C%20MAX30100-1685A7)
 ![Validation](https://img.shields.io/badge/hardware%20testing-pending-A36D3D)
-
 
 **ESP8266 · MAX30100 · OLED · Blynk IoT**
 
@@ -17,9 +16,7 @@ An educational IoT prototype that reads heart-rate and estimated peripheral oxyg
 
 ## Hardware and data path
 
-![Labeled system architecture showing MAX30100, ESP8266, OLED and optional Blynk connectivity](docs/brand/pulse-oximeter-banner.svg)
-
-*Conceptual architecture — not a photograph, circuit verification, or measured performance result.*
+The banner above shows the proposed sensing and communication path. It is an architectural illustration, not evidence of assembled hardware or calibrated readings.
 
 | Component | Role |
 | --- | --- |
