@@ -1,0 +1,11 @@
+# ESP8266 local device configuration; never commit real credentials.
+**/secrets.h
+
+# Editor and build outputs
+.vscode/
+.idea/
+*.bin
+*.elf
+*.map
+build/
+.DS_Store
